@@ -13,7 +13,7 @@ namespace Chiffrement_XOR
 
         public string chiffrement(string mot)
         {
-            for (int i = 0; i <= 30; i++)
+            for (int i = 0; i <= 30; i++) // reconnaissance de la lettre
             {
                 if( mot == Alpha[i] )
                 {
@@ -22,7 +22,7 @@ namespace Chiffrement_XOR
                 }
             };
            Console.WriteLine(lettre);
-            for(int i=0; i <= 4;i++)
+            for(int i=0; i <= 4;i++) // chiffrement XOR
                {
                if(lettre.Substring(i,1) == clef.Substring(i,1))
                {
@@ -47,13 +47,14 @@ namespace Chiffrement_XOR
 
                 }
             ;
+            Console.WriteLine(rendu);
             return rendu;
         }
 
         public string restitution(string mot)
         {
           
-            for (int i = 0; i <= 30; i++)
+            for (int i = 0; i <= 30; i++) // attribution du resultat du chiffrement a une lettre
             {
                 if (mot == binaire[i])
                 {
@@ -63,6 +64,10 @@ namespace Chiffrement_XOR
             return rendu;
         }
     }
+
+
+
+
     class Program
     {
         
